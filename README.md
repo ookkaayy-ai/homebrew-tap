@@ -14,7 +14,17 @@ brew install --cask ookkaayy-version
 
 Install only the products you need. Homebrew verifies each versioned download against the checksum recorded in its Cask.
 
-Standalone CLI and headless Casks will be added when those release archives are available.
+## Install the CLI, headless API, and MCP servers
+
+```sh
+brew install --cask ookkaayy-content-cli
+brew install --cask ookkaayy-search-cli
+brew install --cask ookkaayy-version-cli
+```
+
+The CLI Casks install `ookkaayy-content`, `ookkaayy-search`, and
+`ookkaayy-version` on `PATH`. Each command includes `doctor`, `serve`, and
+`mcp`; Search also includes scriptable collection and retrieval commands.
 
 ## Upgrade or remove
 
