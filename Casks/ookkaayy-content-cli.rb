@@ -11,4 +11,10 @@ cask "ookkaayy-content-cli" do
   depends_on macos: :big_sur
 
   binary "ookkaayy-content-cli-#{version}/ookkaayy-content"
+
+  caveats <<~EOS
+    This early binary is ad-hoc signed and not notarized. macOS quarantines it
+    after download. After reviewing this warning, explicitly allow it once with:
+      xattr -d com.apple.quarantine "#{HOMEBREW_PREFIX}/bin/ookkaayy-content"
+  EOS
 end

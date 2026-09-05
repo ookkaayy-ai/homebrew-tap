@@ -27,7 +27,18 @@ The CLI Casks install `ookkaayy-content`, `ookkaayy-search`, and
 `mcp`; Search also includes scriptable collection and retrieval commands.
 
 Version 0.1.0 supports Apple-silicon Macs running macOS 11 or newer. These
-early binaries are ad-hoc signed and not yet notarized.
+early binaries are ad-hoc signed and not yet notarized. macOS quarantines them
+after Homebrew downloads them. After reviewing this warning, explicitly allow
+the installed commands once:
+
+```sh
+xattr -d com.apple.quarantine "$(brew --prefix)/bin/ookkaayy-content"
+xattr -d com.apple.quarantine "$(brew --prefix)/bin/ookkaayy-search"
+xattr -d com.apple.quarantine "$(brew --prefix)/bin/ookkaayy-version"
+```
+
+Developer ID signing and notarization will remove this temporary step in a
+later release.
 
 ## Use the CLI
 
