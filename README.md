@@ -6,6 +6,7 @@ Homebrew packages for the Ookkaayy local-first Markdown applications.
 
 ```sh
 brew tap ookkaayy-ai/tap
+brew trust ookkaayy-ai/tap
 brew install --cask ookkaayy-content
 brew install --cask ookkaayy-search
 brew install --cask ookkaayy-version
@@ -24,4 +25,3 @@ brew uninstall --cask ookkaayy-search
 ```
 
 Product documentation and direct downloads are available at <https://shmcsensei.github.io/ookkaayy-website/>.
-
